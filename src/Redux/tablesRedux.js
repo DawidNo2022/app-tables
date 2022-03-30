@@ -50,11 +50,11 @@ export const updateTableRequest = (tableInfo) => {
       }),
     };
     dispatch(fetchStart());
-    fetch(`${API_URL}/tables/${tableInfo.id}`, options).then(() =>
-      dispatch(editTable(tableInfo)).catch((error) =>
+    fetch(`${API_URL}/tables/${tableInfo.id}`, options)
+      .then(() => dispatch(editTable(tableInfo)))
+      .catch((error) =>
         dispatch(fetchError(error.message || 'Data wrong loaded'))
-      )
-    );
+      );
   };
 };
 
