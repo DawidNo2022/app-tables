@@ -10,7 +10,7 @@ import {
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import shortid from 'shortid';
-import { Spinner } from 'react-bootstrap';
+import MySpinner from '../MySpinner';
 import PageNotFound from '../PageNotFound.js';
 
 const TableForm = () => {
@@ -39,7 +39,7 @@ const TableForm = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    //e.preventDefault();
     dispatch(
       updateTableRequest({ status, peopleAmount, maxPeopleAmount, bill, id })
     );
@@ -72,7 +72,7 @@ const TableForm = () => {
   const TablesIsLoading = useSelector(dataIsLoading);
   return (
     <>
-      {TablesIsLoading && <Spinner />}
+      {TablesIsLoading && <MySpinner />}
       {!TablesIsLoading && !table && <PageNotFound />}
       {!TablesIsLoading && table && (
         <>

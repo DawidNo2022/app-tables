@@ -7,7 +7,6 @@ import { dataIsLoading } from '../../Redux/tablesRedux';
 
 const Home = () => {
   const tables = useSelector((state) => getAllTables(state));
-  console.log(tables, 'Tables');
 
   const TablesIsLoading = useSelector(dataIsLoading);
   return (
