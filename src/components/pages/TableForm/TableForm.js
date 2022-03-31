@@ -39,7 +39,7 @@ const TableForm = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    //e.preventDefault();
+    e.preventDefault();
     dispatch(
       updateTableRequest({ status, peopleAmount, maxPeopleAmount, bill, id })
     );

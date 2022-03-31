@@ -1,7 +1,7 @@
 {
   "tables": [
     {
-      "status": "Free",
+      "status": "Busy",
       "peopleAmount": "0",
       "maxPeopleAmount": "6",
       "bill": "0",
